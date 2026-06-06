@@ -1,7 +1,6 @@
 [build]
-builder = "NIXPACKS"
-buildCommand = "mvn package -DskipTests"
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
 
 [deploy]
-startCommand = "java -jar target/treasure-game-backend-0.0.1-SNAPSHOT.jar"
 healthcheckPath = "/api/auth/signin"
