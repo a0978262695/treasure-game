@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s http://localhost:8080/api/auth/signin -X POST -H \"Content-Type: application/json\" -d '{\"email\":\"x\",\"password\":\"x\"}')",
+      "Bash(mvn spring-boot:run)",
+      "Bash(echo \"PID=$!\")",
+      "Bash(npm run *)",
+      "Bash(echo \"Frontend PID=$!\")",
+      "Bash(lsof -ti:8080)",
+      "Bash(xargs kill -9)",
+      "Bash(curl -s -X POST http://localhost:8080/api/auth/signup -H 'Content-Type: application/json' -d '{\"email\":\"test@test.com\",\"password\":\"test123\",\"displayName\":\"TestUser\"}')",
+      "Bash(lsof -ti:5173)",
+      "Bash(lsof -ti:3000)",
+      "Bash(npx playwright *)",
+      "Bash(pkill -f \"vite\")",
+      "Bash(mvn -q dependency:resolve)",
+      "Bash(echo \"Backend PID: $!\")",
+      "Bash(echo \"Frontend PID: $!\")",
+      "Bash(vercel *)",
+      "Bash(gh auth *)",
+      "Bash(brew install *)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
+    ]
+  }
+}
